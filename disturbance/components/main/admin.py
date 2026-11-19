@@ -460,6 +460,7 @@ class MapLayerAdmin(admin.ModelAdmin):
     search_fields = ["display_name", "layer_name", "columns__name"]
     form = MyForm
     inlines = [MapColumnInline]
+    ordering = ["display_name"]
 
     actions = ["refresh_server_status"]
 
